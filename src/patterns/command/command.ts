@@ -1,17 +1,17 @@
-interface Command {
+export interface Command {
     execute();
 }
-interface Receiver {
+export interface Receiver {
     methodA();
     methodB();
 }
-class ConcreteCommandA implements Command {
+export class ConcreteCommandA implements Command {
     constructor(private receiver: Receiver) { }
     execute() {
         this.receiver.methodA();
     }
 }
-class ConcreteCommandB implements Command {
+export class ConcreteCommandB implements Command {
     constructor(private receiver: Receiver) { }
     execute() {
         this.receiver.methodB();
